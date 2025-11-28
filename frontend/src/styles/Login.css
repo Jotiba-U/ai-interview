@@ -1,0 +1,139 @@
+:root {
+  --accent1: #4facfe;
+  --accent2: #00f2fe;
+  --bg-dark: #0f0f1f;
+  --text-light: #ffffff;
+  --text-dim: rgba(255, 255, 255, 0.7);
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Full Page Background */
+.login-page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at top, #12122b, #0f0f1f 70%);
+  overflow: hidden;
+  position: relative;
+}
+
+/* Glowing Login Box */
+.login-box {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  padding: 50px 40px;
+  width: 350px;
+  box-shadow: 0 0 30px rgba(79, 172, 254, 0.4);
+  text-align: center;
+  position: relative;
+  z-index: 5;
+}
+
+/* Glowing Heading */
+.glow-text {
+  font-size: 2rem;
+  font-weight: 800;
+  background: linear-gradient(90deg, var(--accent1), var(--accent2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 15px;
+  text-shadow: 0 0 10px var(--accent1);
+}
+
+.subtitle {
+  color: var(--text-dim);
+  font-size: 0.95rem;
+  margin-bottom: 25px;
+}
+
+/* Inputs */
+input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0 20px 0;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-light);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--accent1);
+  box-shadow: 0 0 10px var(--accent1);
+}
+
+/* Button */
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(90deg, var(--accent1), var(--accent2));
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 25px var(--accent2);
+}
+
+/* Sign Up Text */
+.signup-link {
+  color: var(--text-dim);
+  margin-top: 20px;
+  font-size: 0.9rem;
+}
+
+.signup-link a {
+  color: var(--accent2);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.signup-link a:hover {
+  text-decoration: underline;
+}
+
+/* Subtle Glow Animation */
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+  100% { transform: translateY(0); }
+}
+
+.login-box {
+  animation: float 4s ease-in-out infinite;
+}
+
+/* ─────────────── Home Button (Top-Right Corner) ─────────────── */
+.top-bar {
+  position: absolute;
+  top: 25px;
+  right: 35px;
+  z-index: 10;
+}
+
+.home-link {
+  background: linear-gradient(90deg, var(--accent1), var(--accent2));
+  color: var(--text-light);
+  padding: 10px 18px;
+  border-radius: 25px;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 0.95rem;
+  box-shadow: 0 0 15px rgba(79, 172, 254, 0.4);
+  transition: all 0.3s ease;
+}
+
+.home-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 25px var(--accent2);
+}
